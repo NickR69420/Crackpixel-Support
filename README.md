@@ -11,13 +11,17 @@
 ---
 Discord bot written in Typescript, using the Discord.js Library.It has support features like tickets, ~~syncing~~ etc.
 
+## P.S.
+Made public to show code
+You may use the code. Must be credited.
+
 ## Requirements
 * Node
 * PostgreSQL Database
 
 ## Setup
 
-Coming Soon
+NOT AVAILABLE
 
 ## Contributors
-* [Nickk#7480](https://github.com/NickR69420)
+* [nicgro](https://github.com/NickR69420)
