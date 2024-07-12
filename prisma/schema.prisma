@@ -1,0 +1,27 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Ticket {
+  Id       String  @id @unique
+  userId   String
+  number   Int
+  locked   Boolean @default(false)
+  closed   Boolean @default(false)
+  closedBy String?
+  reason   String?
+  type     String
+}
+
+model Transcript {
+  Id   String @id @unique
+  data String
+}

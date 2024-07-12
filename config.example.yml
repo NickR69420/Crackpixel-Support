@@ -1,0 +1,95 @@
+###################################
+#                                 #
+#            TICKETS              # 
+#                                 #
+###################################
+
+Token: ''
+GuildId: ''
+DevToken: ''
+Dev: false
+DevGuildId: ''
+
+###################################
+#                                 #
+#         COMMAND CONFIG          #
+#                                 #
+###################################
+
+commands:
+    ###################################
+    #                                 #
+    #           RATELIMITS            #
+    #                                 #
+    ###################################
+
+    ratelimits:
+        ping: 2
+        close: 60
+        create: 300
+        lock: 60
+        unlock: 10
+
+    ###################################
+    #                                 #
+    #             STATUS              #
+    #                                 #
+    ###################################
+
+    status:
+        ping: true
+        close: true
+        create: true
+        lock: true
+        unlock: true
+
+Tickets:
+    Panel:
+        Title: '' # Eg: "Bedwars Space Support"
+        Description: '' # Eg: "Choose a ticket type blah blah (use formatting and emojis if you like)"
+        Footer: '' # Footer text. (optional)
+        
+    Categories:
+        - name: 'General Support'
+          emoji: '💻'
+          # Parent Category ID
+          categoryId: ''
+          # Make sure it is in lower case. This will be used for interaction via discord api.
+          id: 'general-support'
+          # Roles allowed to view the channel. (support role)
+          allowedRoles: ['']
+          # Roles to ping when a ticket is opened. Please provide Id of the roles.
+          mentions: ['']
+          # Ticket opening embed; Available options: title, description, footer. (optional)
+          embed:
+              description: 'Hey! Please state the reason for opening this ticket. We will be with you right after that.'
+
+        - name: 'Ban Appeals'
+          emoji: '🔨'
+          categoryId: ''
+          id: 'ban-appeals'
+          allowedRoles: ['']
+          embed:
+              title: 'Punishment Appeal'
+          # Addons: Button Responses; Options: name, emoji(optional), id, response: message / embed;
+          addons:
+              - name: 'Addon'
+                emoji: '⚙'
+                id: 'addon-1'
+                response:
+                    message: 'Here is a response'
+                    embed:
+                        description: 'Embed response'
+
+    Transcripts:
+        # The host ip address.
+        host: '0.0.0.0'
+        # The address to post the transcript api.
+        address: 'http://127.0.0.1'
+        # Port of the api.
+        port: 3000
+        channel: ''
+
+    Logs:
+        enabled: true
+        channel: ''
